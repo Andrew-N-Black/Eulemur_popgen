@@ -16,5 +16,5 @@ title1<-"Locality"
 title2<-"Assumed Ancestry"
 
 #By Population
-ggplot(data=PC1_3, aes(y=V2, x=V1))+geom_point(size=5,pch=21,aes(fill=Fecalseq_metadata_v4$Putative_species))+ theme_classic() + xlab("PC1 (33.75%)") +ylab("PC2 (6.07%)")+geom_hline(yintercept=0,linetype="dashed")+geom_vline(xintercept =0,linetype="dashed")+ scale_fill_brewer(palette="Paired")+theme(legend.title=element_blank())
+ggplot(data=PC1_3, aes(y=V2, x=V1))+geom_point(size=5,pch=21,aes(fill=Fecalseq_metadata_v4$Putative_species))+ theme_classic() + xlab("PC1 (33.75%)") +ylab("PC2 (6.07%)")+geom_hline(yintercept=0,linetype="dashed")+geom_vline(xintercept =0,linetype="dashed") +scale_fill_manual(values=c("orchid","dodgerblue2","yellow"))+theme(legend.title=element_blank())
 ggsave("~/pca.lemur.svg")
