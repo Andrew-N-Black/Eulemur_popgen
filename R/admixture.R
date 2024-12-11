@@ -1,4 +1,5 @@
 library(pophelper)
 slist<-readQ(files =c("lemur.k2.txt","lemur.k3.txt","lemur.k4.txt"))
-both <- as.data.frame(Fecalseq_metadata_v2[,c(2,1)])
+Fecalseq_metadata_v3 <- read.csv("~/Fecalseq_metadata_v3.csv")
+both <- as.data.frame(Fecalseq_metadata_v3[,c(12,1)])
 plotQ(slist[1:3],returnplot=T,exportplot=T,imgoutput = "join",clustercol=c("#33A02C","#1F78B4","#B2DF8A","orange","#FB9A99"),grplab=both,ordergrp=T,showlegend=T,height=3,indlabsize=1.8,indlabheight=0.08,indlabspacer=0,barbordercolour="black",divsize = 0.1,grplabsize=0.6,barbordersize=0,linesize=0.4,showsp = F,splabsize = 0,outputfilename="plotq",imgtype="pdf",exportpath=getwd(),splab = c("K=2","K=3","K=4"),divcol = "black",splabcol="black",grplabheight=0,grplabangle =45)
