@@ -1,3 +1,5 @@
+#Below is the SLURM job used to calculate individual heterozygosity for each sample
+
 #!/bin/bash
 #SBATCH --job-name=lemur_het
 #SBATCH -A core
