@@ -1,3 +1,5 @@
+#The SLURM job below was used to run n=45 fecal-seq samples for 10 runs of K1-K10
+
 #!/bin/bash
 #SBATCH -A core
 #SBATCH -p core 
@@ -13,9 +15,9 @@ do
   	for i in {1..10}
         do
                  ~/Software/NGSadmix -P 8  \
-                -K ${i} -minMaf 0.05 -maxiter 50000 -tol 1e-9 -tolLike50 1e-9 \
-                -likes filtered.beagle.gz \
-                -outfiles  ADX/R_${j}/K${i}_R${j}
+                -K ${i} -maxiter 50000 -tol 1e-9 -tolLike50 1e-9 \
+                -likes revised.beagle.gz \
+                -outfiles  ADX_R/R_${j}/K${i}_R${j}
                 i=$[$i+1]
 
         done
