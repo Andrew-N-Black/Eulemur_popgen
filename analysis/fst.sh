@@ -74,13 +74,9 @@ realSFS fst index FST/CIN.saf.idx FST/RUF.saf.idx FST/HYB.saf.idx -sfs FST/CIN.R
 realSFS fst stats2 FST/three_pop.fst.idx -win 50000 -step 25000 -P 8 > FST/slidingwindow
 
 #Calculate average fst for each sliding windown analysis:
-#cut -f 5 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
-
-#cut -f 6 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
-
-#cut -f 7 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
-
-#cut -f 8 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
-
-
-#DONE
+cut -f 5 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
+#0.0402667
+ cut -f 6 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
+#0.0381632
+cut -f 7 slidingwindow | tail -n +2 | awk '{ sum += $1 } END { print(sum / NR) }'
+#0.0208085
