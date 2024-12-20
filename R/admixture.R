@@ -1,4 +1,8 @@
 library(pophelper)
+
+brewer.pal(n=5,"Dark2")
+[1] "#1B9E77" "#D95F02" "#7570B3" "#E7298A" "#66A61E"
+
 #Load in merged Q matrices (from CLUMPP) for K2-K4
 slist<-readQ(files =c("lemur.K2","lemur.K3","lemur.K4"))
 #Load in metadata for sorting based upon latitude and presumed species identity
