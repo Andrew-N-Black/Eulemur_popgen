@@ -1,4 +1,4 @@
-#The SLURM job below was used to run n=45 fecal-seq samples for 10 runs of K1-K10
+#The SLURM job below was used to run n=49 fecal-seq samples for 10 runs of K1-K10
 
 #!/bin/bash
 #SBATCH -A core
@@ -24,7 +24,7 @@ do
 	j=$[$j+1]
 done
 
-#Repeat using three individuals removed
+#Repeat using three individuals removed (n=46)
 #for  ((i=1;i<=10;i++));  do mkdir R_$i; done
 while [ $j -lt 100 ]
 do
