@@ -56,7 +56,7 @@ realSFS FST/RUF.saf.idx FST/HYB.saf.idx -P 8 > FST/RUF.HYB.ml
 #Index sample so same sites are analyzed for each pop
 mkdir FST/out
 realSFS fst index FST/CIN.saf.idx FST/RUF.saf.idx -sfs FST/CIN.RUF.ml -fstout FST/CIN_RUF -P 8
-realSFS fst index FST/CIN.saf.idx FST/HYB.saf.idx -sfs FST/CIN.RUF.ml -fstout FST/CIN_RUF -P 8
+realSFS fst index FST/CIN.saf.idx FST/HYB.saf.idx -sfs FST/CIN.HYB.ml -fstout FST/CIN_HYB -P 8
 realSFS fst index FST/RUF.saf.idx FST/HYB.saf.idx -sfs FST/RUF.HYB.ml -fstout FST/RUF_HYB -P 8
 
 #Global pairwise estimates
